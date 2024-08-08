@@ -15,6 +15,8 @@ export const CatalogItem = ({ item }) => {
     setModalIsOpen(false);
   };
 
+  console.log(item);
+
   return (
     <div className={css.catalogItem}>
       <img className={css.itemImg} src={item.gallery[0]} alt="" />
@@ -75,7 +77,7 @@ export const CatalogItem = ({ item }) => {
             <span>AC</span>
           </li>
         </ul>
-        <button className={css.buttonShowMore} onClick={() => {}}>
+        <button className={css.buttonShowMore} onClick={() => openModal()}>
           Show more
         </button>
         <button style={{ background: 'inherit' }}>
@@ -88,6 +90,7 @@ export const CatalogItem = ({ item }) => {
         modalIsOpen={modalIsOpen}
         openModal={openModal}
         closeModal={closeModal}
+        item={item}
       />
     </div>
   );
