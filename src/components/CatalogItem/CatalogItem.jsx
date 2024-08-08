@@ -15,8 +15,6 @@ export const CatalogItem = ({ item }) => {
     setModalIsOpen(false);
   };
 
-  console.log(item);
-
   return (
     <div className={css.catalogItem}>
       <img className={css.itemImg} src={item.gallery[0]} alt="" />
