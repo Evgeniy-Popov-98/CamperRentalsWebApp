@@ -6,13 +6,10 @@ const instance = axios.create({
 });
 
 export const fetchCampers = createAsyncThunk(
-  'contacts/fetchAll',
+  'campers/fetchAll',
   async (_, thunkApi) => {
     try {
       const response = await instance.get('/adverts');
-
-      console.log(response.data);
-
       return response.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

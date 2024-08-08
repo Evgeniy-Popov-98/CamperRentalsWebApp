@@ -4,15 +4,9 @@ export const HeadersNavigation = () => {
   return (
     <header>
       <nav>
-        <NavLink to="/" className="">
-          Home
-        </NavLink>
-        <NavLink to="/catalog" className="">
-          Catalog
-        </NavLink>
-        <NavLink to="/favorites" className="">
-          Favorites
-        </NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/catalog">Catalog</NavLink>
+        <NavLink to="/favorites">Favorites</NavLink>
       </nav>
     </header>
   );

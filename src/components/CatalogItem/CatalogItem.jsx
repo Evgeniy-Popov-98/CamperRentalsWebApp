@@ -1,7 +1,3 @@
 export const CatalogItem = () => {
-  return (
-    <li>
-      <p></p>
-    </li>
-  );
+  return <p>Li</p>;
 };
