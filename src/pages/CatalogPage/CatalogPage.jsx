@@ -13,9 +13,8 @@ export const CatalogPage = () => {
 
   return (
     <section>
-      <p>Hello</p>
-      {/* <FiltersBox /> */}
-      {/* <CatalogList /> */}
+      <FiltersBox />
+      <CatalogList />
     </section>
   );
 };

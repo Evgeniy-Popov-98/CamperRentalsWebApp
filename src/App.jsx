@@ -11,7 +11,7 @@ import { CatalogPage } from './pages/CatalogPage/CatalogPage';
 // const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 // const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
 
-import './App.css';
+// import './App.css';
 
 function App() {
   return (

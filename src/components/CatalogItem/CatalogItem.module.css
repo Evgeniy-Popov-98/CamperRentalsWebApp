@@ -1,0 +1,118 @@
+.catalogItem {
+  width: 888px;
+  height: 358px;
+  padding: 24px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+
+  display: flex;
+  gap: 24px;
+}
+
+.itemImg {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+}
+
+.descriptionBox {
+  width: 526px;
+  height: 310px;
+  position: relative;
+}
+
+.itemTitleBox {
+  width: 490px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemTitle {
+  text-align: left;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main-color);
+}
+
+.itemTitlePrice {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.itemSubTitleBox {
+  margin-top: 8px;
+  display: flex;
+  gap: 16px;
+}
+
+.itemSubTitleRating {
+  line-height: 150%;
+  color: var(--main-color);
+}
+
+.itemSubTitleLocation {
+  line-height: 150%;
+  color: var(--main-color);
+}
+
+.descriptionText {
+  width: 525px;
+  margin: 24px 0;
+  line-height: 150%;
+  color: #475467;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.descriptionList {
+  width: 526px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.descriptionItem {
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: #f2f4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.descriptionIcons {
+  width: 20px;
+  height: 20px;
+}
+
+.buttonShowMore {
+  width: 166px;
+  height: 56px;
+  margin-top: 17px;
+  padding: 16px 40px;
+  border-radius: 200px;
+  background: #e44848;
+
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.buttonIsFavotes {
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  top: 3px;
+  right: 0;
+
+  stroke: black;
+  fill: #fff;
+}
