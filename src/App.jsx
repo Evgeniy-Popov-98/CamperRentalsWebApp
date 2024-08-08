@@ -11,7 +11,7 @@ import { FavoritesPage } from './pages/FavoritesPage/FavoritesPage';
 // const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 // const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
 
-// import './App.css';
+import './App.css';
 
 function App() {
   return (

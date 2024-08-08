@@ -1,0 +1,99 @@
+.modalBox {
+  width: 902px;
+  overflow: hidden;
+  overflow-y: auto; /**!!**/
+}
+
+.modalTitle {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main-color);
+}
+
+.modalSubTitleBox {
+  width: 267px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SubTitleRating {
+  line-height: 150%;
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.SubTitleLocation {
+  line-height: 150%;
+  color: var(--main-color);
+}
+
+.modalPrice {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main-color);
+}
+
+.modalImgBox {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.modalImg {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+}
+
+.modalDescription {
+  margin-bottom: 44px;
+  line-height: 150%;
+  color: #475467;
+}
+
+.detailsBtnBox {
+  width: 206px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailsBtn {
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main-color);
+  background-color: inherit;
+}
+
+.detailsLine {
+  margin: 0;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.2);
+  border: none;
+}
+
+.detailsFeaturesBox {
+}
+
+.detailsReviewsBox {
+}
+
+.detailsVehicle {
+}
+
+.detailsVehicleList {
+}
+
+.detailsVehicleItem {
+}
