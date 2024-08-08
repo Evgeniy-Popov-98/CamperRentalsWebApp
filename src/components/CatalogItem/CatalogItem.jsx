@@ -1,7 +1,20 @@
+import { ModalWindow } from '../ModalWindow/ModalWindow';
+import { useState } from 'react';
+
 import css from './CatalogItem.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
 export const CatalogItem = ({ item }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div className={css.catalogItem}>
       <img className={css.itemImg} src={item.gallery[0]} alt="" />
@@ -62,13 +75,20 @@ export const CatalogItem = ({ item }) => {
             <span>AC</span>
           </li>
         </ul>
-        <button className={css.buttonShowMore}>Show more</button>
+        <button className={css.buttonShowMore} onClick={() => {}}>
+          Show more
+        </button>
         <button style={{ background: 'inherit' }}>
           <svg className={css.buttonIsFavotes}>
             <use href={`${icons}#icon-like`} />
           </svg>
         </button>
       </div>
+      <ModalWindow
+        modalIsOpen={modalIsOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
     </div>
   );
 };
