@@ -12,7 +12,7 @@ export const CatalogList = () => {
       <ul className={css.canperList}>
         {Array.isArray(campers) &&
           campers.map(camper => (
-            <li key={camper.id}>
+            <li key={camper._id}>
               <CatalogItem item={camper} />
             </li>
           ))}

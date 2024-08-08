@@ -2,8 +2,6 @@ import css from './CatalogItem.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
 export const CatalogItem = ({ item }) => {
-  console.log(item);
-
   return (
     <div className={css.catalogItem}>
       <img className={css.itemImg} src={item.gallery[0]} alt="" />
