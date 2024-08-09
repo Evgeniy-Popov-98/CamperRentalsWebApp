@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCampers } from '../../redux/camper/operations';
 
+import css from './CatalogPage.module.css';
+
 export const CatalogPage = () => {
   const dispatch = useDispatch();
 
@@ -12,7 +14,7 @@ export const CatalogPage = () => {
   }, [dispatch]);
 
   return (
-    <section>
+    <section className={css.cataligSection}>
       <FiltersBox />
       <CatalogList />
     </section>
