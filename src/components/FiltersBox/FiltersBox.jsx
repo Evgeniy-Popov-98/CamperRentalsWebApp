@@ -1,10 +1,16 @@
 import { useState } from 'react';
+import { FilterEquipment } from '../FilterEquipment/FilterEquipment';
+import { FilterType } from '../FilterType/FilterType';
 
 import css from './FiltersBox.module.css';
-import icons from '../../assets/icons/symbol.svg';
 
 export const FiltersBox = () => {
+  const [hasAccepted, setHasAccepted] = useState(false);
   const [camper, setCamper] = useState('');
+
+  const handleChange = evt => {
+    setHasAccepted(evt.target.checked);
+  };
 
   const handleSizeChange = evt => {
     setCamper(evt.target.value);
@@ -18,58 +24,13 @@ export const FiltersBox = () => {
           <input type="text" />
         </label>
       </div>
-      <div className={css.filterBox}>
+      <div>
         <h2 className={css.filterBoxTitle}>Filters</h2>
-        <h3 className={css.camperEquipment}>Vehicle equipment</h3>
-        <hr className={css.line} />
-        <div className={css.camperEquipmentBox}>
-          <form action=""></form>
-        </div>
-        <div>
-          <h3 className={css.camperType}>Vehicle type</h3>
-          <hr className={css.line} />
-          <div className={css.camperRadioBnt}>
-            <label className={css.line}>
-              <input
-                type="radio"
-                name="camper"
-                value="Van"
-                checked={camper === 'Van'}
-                onChange={handleSizeChange}
-              />
-              <svg className={css.d} style={{}}>
-                <use href={`${icons}#icon-camper2`} />
-              </svg>
-              <p>Van</p>
-            </label>
-            <label className={css.camperRadioBnt}>
-              <input
-                type="radio"
-                name="camper"
-                value="Fully Integrated"
-                checked={camper === 'Fully Integrated'}
-                onChange={handleSizeChange}
-              />
-              <svg className={css.descriptionIcons} style={{}}>
-                <use href={`${icons}#icon-camper1`} />
-              </svg>
-              <p>Fully Integrated</p>
-            </label>
-            <label className={css.camperRadioBnt}>
-              <input
-                type="radio"
-                name="camper"
-                value="Alcove"
-                checked={camper === 'Alcove'}
-                onChange={handleSizeChange}
-              />
-              <svg className={css.descriptionIcons} style={{}}>
-                <use href={`${icons}#icon-camper`} />
-              </svg>
-              <p>Alcove</p>
-            </label>
-          </div>
-        </div>
+        <FilterEquipment
+          hasAccepted={hasAccepted}
+          handleChange={handleChange}
+        />
+        <FilterType camper={camper} handleSizeChange={handleSizeChange} />
       </div>
     </div>
   );

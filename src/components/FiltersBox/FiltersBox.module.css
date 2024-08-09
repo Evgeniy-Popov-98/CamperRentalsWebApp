@@ -17,79 +17,10 @@
 .locationInput {
 }
 
-.filterBox {
-  width: 360px;
-  margin-bottom: 32px;
-}
-
 .filterBoxTitle {
   margin-bottom: 14px;
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
   color: rgba(16, 24, 40, 0.6);
-}
-
-.camperEquipment {
-  margin-bottom: 24px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 120%;
-  color: var(--main-color);
-}
-
-.camperEquipmentBox {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.camperCheckBoxBtn {
-  width: 100px;
-  height: 95px;
-  padding: 17px 30px;
-  border: 1px solid rgba(16, 24, 40, 0.2);
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.camperType {
-  margin-bottom: 24px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 120%;
-  color: var(--main-color);
-}
-
-.camperTypeBox {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.camperRadioBnt {
-  width: 100px;
-  height: 95px;
-  padding: 17px 30px;
-  border: 1px solid rgba(16, 24, 40, 0.2);
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.line {
-  margin: 0;
-  height: 1px;
-  background-color: rgba(16, 24, 40, 0.2);
-  border: none;
 }

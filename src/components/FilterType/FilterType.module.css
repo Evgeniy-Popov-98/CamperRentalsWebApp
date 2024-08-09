@@ -1,0 +1,67 @@
+.camperType {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main-color);
+}
+
+.camperTypeBox {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.camperRadioBnt {
+  width: 100px;
+  height: 95px;
+  padding: 17px 30px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioBtnBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.camperFilterBtnText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.line {
+  margin: 0;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.2);
+  border: none;
+}
+
+.filterIcons {
+  width: 40px;
+  height: 28px;
+}
+
+.filterInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
