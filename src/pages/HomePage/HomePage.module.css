@@ -1,0 +1,45 @@
+.homePageContainer {
+  width: 1440px;
+  padding: 30px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailInfoBox {
+  width: 650px;
+}
+
+.detailTitle {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main-color);
+}
+
+.detailSubTitle {
+  margin-bottom: 24px;
+  line-height: 150%;
+  color: var(--main-color);
+}
+
+.detailText {
+  margin-bottom: 24px;
+  line-height: 150%;
+  color: var(--main-color);
+}
+
+.linkCatalog {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.imgContainer {
+}
+
+.img {
+}

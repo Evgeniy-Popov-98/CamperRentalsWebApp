@@ -1,0 +1,32 @@
+.headerContainer {
+  width: 1440px;
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 0 0 20px 20px;
+  border-top: none;
+  /* position: fixed;
+  z-index: 100; */
+}
+
+.headerLogo {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.linkText {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main-color);
+  cursor: pointer;
+}

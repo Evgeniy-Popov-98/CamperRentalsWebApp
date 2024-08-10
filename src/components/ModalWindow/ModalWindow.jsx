@@ -1,12 +1,10 @@
 import ModalReact from 'react-modal';
+import { ModalForm } from '../ModalForm/ModalForm';
 
 import css from './ModalWindow.module.css';
 import icons from '../../assets/icons/symbol.svg';
-import { ModalForm } from '../ModalForm/ModalForm';
 
 export const ModalWindow = ({ modalIsOpen, closeModal, item }) => {
-  console.log(item);
-
   return (
     <ModalReact
       isOpen={modalIsOpen}

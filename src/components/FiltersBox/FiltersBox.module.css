@@ -1,0 +1,26 @@
+.filterContainer {
+  width: 360px;
+}
+
+.locationBox {
+  margin-bottom: 32px;
+}
+
+.locationTitle {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.locationInput {
+}
+
+.filterBoxTitle {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgba(16, 24, 40, 0.6);
+}
