@@ -2,7 +2,7 @@ import { CatalogItem } from '../CatalogItem/CatalogItem';
 
 import css from './CatalogList.module.css';
 
-export const CatalogList = ({ newArr, upDataArr }) => {
+export const CatalogList = ({ newArr, upDataArr, isActivBtn = true }) => {
   return (
     <div className={css.campersListBox}>
       <ul className={css.campersList}>
@@ -13,15 +13,17 @@ export const CatalogList = ({ newArr, upDataArr }) => {
             </li>
           ))}
       </ul>
-      <button
-        className={css.buttonLoadMore}
-        type="submit"
-        onClick={() => {
-          upDataArr();
-        }}
-      >
-        Load more
-      </button>
+      {isActivBtn && (
+        <button
+          className={css.buttonLoadMore}
+          type="submit"
+          onClick={() => {
+            upDataArr(true);
+          }}
+        >
+          Load more
+        </button>
+      )}
     </div>
   );
 };

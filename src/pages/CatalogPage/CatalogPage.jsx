@@ -12,28 +12,39 @@ import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
-
+  const сampersAll = useSelector(selectAllCampers);
   const campers = pagination(useSelector(selectAllCampers));
-  const [index, setIndex] = useState(0);
-  const [newArr, setNewArr] = useState([]);
+  const [isAllArr, setIsAllArr] = useState(false);
+  //   const [newArr, setNewArr] = useState([]);
 
   useEffect(() => {
     dispatch(fetchCampers());
   }, [dispatch]);
 
-  useEffect(() => {
-    const data = paginationNewArr(campers, index);
-    setNewArr(prevState => [...prevState, ...data]);
-  }, [index]);
+  //   useEffect(() => {
+  //     const data = paginationNewArr(campers, index);
+  //     setNewArr(prevState => [...prevState, ...data]);
+  //   }, [index]);
 
-  const upDataArr = () => {
-    if (index < campers.length - 1) setIndex(index + 1);
+  const upDataArr = isActiv => {
+    if (isActiv) {
+      setIsAllArr(true);
+    }
+    // if (index < campers.length - 1) setIndex(index + 1);
   };
 
   return (
     <section className={css.catalogSection}>
       <FiltersBox />
-      <CatalogList newArr={newArr} upDataArr={upDataArr} />
+      {isAllArr ? (
+        <CatalogList
+          newArr={сampersAll}
+          upDataArr={upDataArr}
+          isActivBtn={false}
+        />
+      ) : (
+        <CatalogList newArr={campers[0]} upDataArr={upDataArr} />
+      )}
     </section>
   );
 };
