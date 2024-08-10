@@ -14,7 +14,7 @@ export const CatalogPage = () => {
   }, [dispatch]);
 
   return (
-    <section className={css.cataligSection}>
+    <section className={css.catalogSection}>
       <FiltersBox />
       <CatalogList />
     </section>

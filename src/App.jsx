@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 import { Layout } from './components/Layout/Layout';
 import { HomePage } from './pages/HomePage/HomePage';
 import { CatalogPage } from './pages/CatalogPage/CatalogPage';
-// import { FavoritesPage } from './pages/FavoritesPage/FavoritesPage';
+import { FavoritesPage } from './pages/FavoritesPage/FavoritesPage';
 // import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 
 // const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
-          {/* <Route path="/favorites" element={<FavoritesPage />} /> */}
+          <Route path="/favorites" element={<FavoritesPage />} />
           {/* <Route path="*" element={<NotFoundPage />} /> */}
         </Routes>
       </Layout>
