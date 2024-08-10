@@ -15,3 +15,9 @@ export const pagination = array => {
 
   return newArr;
 };
+
+export const paginationNewArr = (array, page) => {
+  const newArr = array[page];
+
+  return newArr;
+};
