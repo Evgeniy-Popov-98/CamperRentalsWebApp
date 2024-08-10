@@ -4,8 +4,13 @@ import { useState } from 'react';
 import css from './CatalogItem.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
+import { addItemLocalStorage, restoreData } from '../../utils/localStorage';
+import { dataLocal } from '../../constans/constans';
+
 export const CatalogItem = ({ item }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [switchBtn, setSwitchBtn] = useState(true);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -13,6 +18,19 @@ export const CatalogItem = ({ item }) => {
 
   const closeModal = () => {
     setModalIsOpen(false);
+  };
+
+  const saveItem = switchBtn => {
+    if (switchBtn) {
+      let data = dataLocal();
+      data.push(item);
+
+      addItemLocalStorage('saved-camper', data);
+      setSwitchBtn(false);
+    } else {
+      restoreData(item);
+      setSwitchBtn(true);
+    }
   };
 
   return (
@@ -78,7 +96,10 @@ export const CatalogItem = ({ item }) => {
         <button className={css.buttonShowMore} onClick={() => openModal()}>
           Show more
         </button>
-        <button style={{ background: 'inherit' }}>
+        <button
+          style={{ background: 'inherit' }}
+          onClick={() => saveItem(switchBtn)}
+        >
           <svg className={css.buttonIsFavotes}>
             <use href={`${icons}#icon-like`} />
           </svg>
