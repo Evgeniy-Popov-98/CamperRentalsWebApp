@@ -11,13 +11,24 @@ const validationYupSchema = Yup.object().shape({
   email: Yup.string()
     .email('Must be a valid email!')
     .required('This field is required!'),
-  //   data: Yup.string
+  date: Yup.date()
+    .required('This field is required!')
+    .min(
+      new Date(2020, 0, 1),
+      'The date cannot be earlier than January 1, 2020!'
+    )
+    .max(
+      new Date(2030, 0, 1),
+      'The date cannot be earlier than January 1, 2030!'
+    ),
+
   message: Yup.string().min(3, 'Too short').max(256, 'Too long'),
 });
 
 const initialValues = {
   name: '',
   email: '',
+  date: new Date().toISOString().split('T')[0],
   message: '',
 };
 
@@ -61,15 +72,12 @@ export const ModalForm = () => {
             name="email"
             component="p"
           />
-          {/* <Field
-            className={css.modalInput}
-            type="date"
+          <Field className={css.modalInput} type="date" name="date" />
+          <ErrorMessage
+            className={css.errorMessage}
             name="date"
-            placeholder="Booking date"
-            min="2024-08-01"
-            max="2030-12-31"
-            required
-          /> */}
+            component="p"
+          />
           <Field
             className={css.modalTextArea}
             as="textarea"
