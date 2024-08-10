@@ -6,7 +6,7 @@ import { CatalogItem } from '../../components/CatalogItem/CatalogItem';
 
 import css from './FavoritesPage.module.css';
 
-export const FavoritesPage = () => {
+const FavoritesPage = () => {
   const [dataList, setDataList] = useState(() => {
     const data = dataLocal();
 
@@ -35,3 +35,5 @@ export const FavoritesPage = () => {
     </div>
   );
 };
+
+export default FavoritesPage;

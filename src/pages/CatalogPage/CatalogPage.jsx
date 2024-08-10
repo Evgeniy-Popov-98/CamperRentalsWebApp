@@ -10,7 +10,7 @@ import { fetchCampers } from '../../redux/camper/operations';
 
 import css from './CatalogPage.module.css';
 
-export const CatalogPage = () => {
+const CatalogPage = () => {
   const dispatch = useDispatch();
 
   const campers = pagination(useSelector(selectAllCampers));
@@ -37,3 +37,5 @@ export const CatalogPage = () => {
     </section>
   );
 };
+
+export default CatalogPage;
