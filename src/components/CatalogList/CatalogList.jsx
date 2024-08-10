@@ -4,15 +4,15 @@ import { selectAllCampers } from '../../redux/camper/selectors';
 import { pagination } from '../../utils/pagination';
 
 import css from './CatalogList.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const CatalogList = () => {
   const campers = pagination(useSelector(selectAllCampers));
   const [index, setIndex] = useState(0);
 
   return (
-    <div>
-      <ul className={css.canperList}>
+    <div className={css.campersListBox}>
+      <ul className={css.campersList}>
         {Array.isArray(campers) &&
           campers[index].map(camper => (
             <li key={camper._id}>
@@ -21,9 +21,11 @@ export const CatalogList = () => {
           ))}
       </ul>
       <button
+        className={css.buttonLoadMore}
         type="submit"
         onClick={() => {
           setIndex(index + 1);
+          //   setNewArr(campers[index]);
         }}
       >
         Load more
