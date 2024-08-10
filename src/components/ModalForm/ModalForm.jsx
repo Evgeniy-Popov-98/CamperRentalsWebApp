@@ -4,17 +4,19 @@ import * as Yup from 'yup';
 import css from './ModalForm.module.css';
 
 const validationYupSchema = Yup.object().shape({
-  username: Yup.string()
+  name: Yup.string()
     .min(3, 'Too Short!')
     .max(30, 'Too Long!')
-    .required('Is required'),
-  email: Yup.string().email('Must be a valid email!').required('Required'),
+    .required('This field is required!'),
+  email: Yup.string()
+    .email('Must be a valid email!')
+    .required('This field is required!'),
   //   data: Yup.string
   message: Yup.string().min(3, 'Too short').max(256, 'Too long'),
 });
 
 const initialValues = {
-  username: '',
+  name: '',
   email: '',
   message: '',
 };
@@ -29,8 +31,8 @@ export const ModalForm = () => {
     <div className={css.modalContainer}>
       <Formik
         initialValues={initialValues}
-        onSubmit={handleSubmit}
         validationSchema={validationYupSchema}
+        onSubmit={handleSubmit}
       >
         <Form>
           <h2 className={css.modalFormTitle}>Book your campervan now</h2>
@@ -43,15 +45,23 @@ export const ModalForm = () => {
             name="name"
             placeholder="Name"
           />
-          <ErrorMessage component="p" name="name" />
+          <ErrorMessage
+            className={css.errorMessage}
+            name="name"
+            component="p"
+          />
           <Field
             className={css.modalInput}
             type="text"
             name="email"
             placeholder="Email"
           />
-          <ErrorMessage component="p" name="email" />
-          <Field
+          <ErrorMessage
+            className={css.errorMessage}
+            name="email"
+            component="p"
+          />
+          {/* <Field
             className={css.modalInput}
             type="date"
             name="date"
@@ -59,14 +69,18 @@ export const ModalForm = () => {
             min="2024-08-01"
             max="2030-12-31"
             required
-          />
+          /> */}
           <Field
             className={css.modalTextArea}
             as="textarea"
             name="message"
             placeholder="Comment"
           />
-          <ErrorMessage component="p" name="message" />
+          <ErrorMessage
+            className={css.errorMessage}
+            name="message"
+            component="p"
+          />
           <button className={css.modalFormBtn} type="submit">
             Send
           </button>
