@@ -83,66 +83,8 @@
   border: none;
 }
 
-.detailsFeaturesBox {
+.detailsBottom {
   margin-top: 44px;
-  width: 430px;
   display: flex;
-  flex-direction: row;
   gap: 24px;
-}
-
-.detailsFeaturesList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.detailsFeaturesItem {
-  padding: 12px 18px;
-  border-radius: 100px;
-  background: #f2f4f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.detailsReviewsBox {
-}
-
-.detailsVehicle {
-  margin-top: 24px;
-  width: 430px;
-}
-
-.vehicleTitle {
-  margin-bottom: 44px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 120%;
-  color: var(--main-color);
-}
-
-.detailsVehicleList {
-  margin-top: 24px;
-  width: 430px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.detailsVehicleItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 133%;
-  color: var(--main-color);
-}
-
-.detailsIcons {
-  width: 20px;
-  height: 20px;
 }
