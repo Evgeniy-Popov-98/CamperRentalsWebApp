@@ -39,7 +39,59 @@
 }
 
 .imgContainer {
+  width: 600px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.img {
+.imgOne {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  bottom: -52px;
+  left: 0;
+  z-index: 1;
+  transition: 1s;
+}
+
+.imgTwo {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  z-index: 3;
+  transition: 1s;
+}
+
+.imgThree {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  top: -53px;
+  right: 0;
+  z-index: 2;
+  transition: 1s;
+}
+
+.imgOne:hover {
+  width: 400px;
+  height: 250px;
+  z-index: 5;
+  transition: 1s;
+}
+
+.imgTwo:hover {
+  width: 400px;
+  height: 250px;
+  z-index: 5;
+  transition: 1s;
+}
+
+.imgThree:hover {
+  width: 400px;
+  height: 250px;
+  z-index: 5;
+  transition: 1s;
 }
