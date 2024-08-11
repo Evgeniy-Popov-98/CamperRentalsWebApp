@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { toast, Toaster } from 'react-hot-toast';
 
 import css from './ModalForm.module.css';
 
@@ -33,6 +34,7 @@ const initialValues = {
 };
 
 const handleSubmit = (values, actions) => {
+  toast.success('The sheet has been sent successfully!');
   console.log(values);
   actions.resetForm();
 };
@@ -40,6 +42,16 @@ const handleSubmit = (values, actions) => {
 export const ModalForm = () => {
   return (
     <div className={css.modalContainer}>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+          error: { duration: 3500 },
+        }}
+      />
       <Formik
         initialValues={initialValues}
         validationSchema={validationYupSchema}
