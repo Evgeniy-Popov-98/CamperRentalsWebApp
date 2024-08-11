@@ -1,8 +1,33 @@
-# React + Vite
+<p align="center"><a href=""><img  width="80%" alt="" src="./assets/header_img.png" /></a></p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br />
 
-Currently, two official plugins are available:
+**Hello traveler**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Do you want to travel with ease and comfort? Then check out our website.
+
+Welcome to our RV rental website, your ultimate destination for comfortable and
+adventurous travel experiences. We offer a wide selection of high-quality,
+fully-equipped motorhomes that cater to all your needs, whether you're planning
+a weekend getaway or an extended road trip. Explore the open road in style and
+convenience, with flexible rental options and exceptional customer service to
+ensure your journey is as smooth and enjoyable as possible. Start your adventure
+with us today!
+
+<hr />
+
+**Tools that were used in the development of the site.**
+
+<ul>
+<li><p>Development environments and code editors:</p><p>Visual Studio Code</p></li>
+<li><p>Wealth Management Tools:</p><p>Redux</p></li>
+<li><p>Routing tools:</p><p>React Router</p></li>
+<li><p>Form Processing and Validation Tools</p><p>Formik, Yup</p></li>
+<li><p>Assembly and automation tools:</p><p>Vite</p></li>
+<li><p>Dependency Management Tools:</p><p>npm</p></li>
+<li><p>Tools for working with API:</p><p>Axios</p></li>
+</ul>
+
+<code><img height="20" alt="html+css" src="./assets/images.png"></code>
+<code><img height="20" alt="javascript" src="./assets/javascript.png"></code>
+<code><img height="20" alt="react" src="./assets/react.png"></code>
