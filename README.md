@@ -19,13 +19,13 @@ with us today!
 **Tools that were used in the development of the site.**
 
 <ul>
-<li><p>Development environments and code editors:</p><span>Visual Studio Code</span></li>
-<li><p>Wealth Management Tools:</p><span>Redux</span></li>
-<li><p>Routing tools:</p><span>React Router</span></li>
-<li><p>Form Processing and Validation Tools</p><span>Formik, Yup</span></li>
-<li><p>Assembly and automation tools:</p><span>Vite</span></li>
-<li><p>Dependency Management Tools:</p><span>npm</span></li>
-<li><p>Tools for working with API:</p><span>Axios</span></li>
+<li><p>Development environments and code editors:</p><span text-decoration="underline">Visual Studio Code</span></li>
+<li><p>Wealth Management Tools:</p><span text-decoration="underline">Redux</span></li>
+<li><p>Routing tools:</p><span text-decoration="underline">React Router</span></li>
+<li><p>Form Processing and Validation Tools</p><span text-decoration="underline">Formik, Yup</span></li>
+<li><p>Assembly and automation tools:</p><span text-decoration="underline">Vite</span></li>
+<li><p>Dependency Management Tools:</p><span text-decoration="underline">npm</span></li>
+<li><p>Tools for working with API:</p><span text-decoration="underline">Axios</span></li>
 </ul>
 
 <code><img height="20" alt="html+css" src="./assets/images.png"></code>
