@@ -1,16 +1,15 @@
 import { ModalWindow } from '../ModalWindow/ModalWindow';
 import { useState } from 'react';
 
-import { addItemLocalStorage, restoreData } from '../../utils/localStorage';
-import { dataLocal } from '../../constans/constans';
+import { restoreData } from '../../utils/localStorage';
 
-import css from './CatalogItem.module.css';
+import css from './FavoritesItem.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
-export const CatalogItem = ({ item }) => {
+export const FavoritesItem = ({ item, isNewArr }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [switchBtn, setSwitchBtn] = useState(true);
-  const [newStyle, setNewStyle] = useState(true);
+  //   const [switchBtn, setSwitchBtn] = useState(true);
+  const [newStyle, setNewStyle] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -20,19 +19,11 @@ export const CatalogItem = ({ item }) => {
     setModalIsOpen(false);
   };
 
-  const saveItem = switchBtn => {
-    if (switchBtn) {
-      let data = dataLocal();
-      data.push(item);
-
-      addItemLocalStorage('saved-camper', data);
-      setSwitchBtn(false);
-      setNewStyle(false);
-    } else {
-      restoreData(item);
-      setSwitchBtn(true);
-      setNewStyle(true);
-    }
+  const saveItem = () => {
+    restoreData(item);
+    //   setSwitchBtn(true);
+    setNewStyle(true);
+    isNewArr();
   };
 
   return (
@@ -108,10 +99,7 @@ export const CatalogItem = ({ item }) => {
         <button className={css.buttonShowMore} onClick={() => openModal()}>
           Show more
         </button>
-        <button
-          style={{ background: 'inherit' }}
-          onClick={() => saveItem(switchBtn)}
-        >
+        <button style={{ background: 'inherit' }} onClick={() => saveItem()}>
           <svg
             className={`${
               newStyle ? css.buttonIsFavotes : css.buttonFavotesIsActive

@@ -5,3 +5,24 @@
   justify-content: space-between;
   gap: 20px;
 }
+
+.campersListBox {
+  width: 888px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campersList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.campersText {
+  margin-top: 150px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+}

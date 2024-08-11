@@ -1,8 +1,8 @@
 import ModalReact from 'react-modal';
 import { useState } from 'react';
 
-import { FeaturesInfo } from '../FeaturesInfo/FeaturesInfo';
 import { ModalForm } from '../ModalForm/ModalForm';
+import { FeaturesInfo } from '../FeaturesInfo/FeaturesInfo';
 import { ReviewsInfo } from '../ReviewsInfo/ReviewsInfo';
 
 import css from './ModalWindow.module.css';
@@ -47,7 +47,7 @@ export const ModalWindow = ({ modalIsOpen, closeModal, item }) => {
           <p className={css.modalDescription}>{item.description}</p>
           <div className={css.detailsBtnBox}>
             <button
-              className={css.detailsBtn}
+              className={`${isActiv ? css.detailsBtnIsActive : css.detailsBtn}`}
               onClick={() => {
                 setIsActiv(true);
               }}
@@ -55,7 +55,7 @@ export const ModalWindow = ({ modalIsOpen, closeModal, item }) => {
               Features
             </button>
             <button
-              className={css.detailsBtn}
+              className={`${isActiv ? css.detailsBtn : css.detailsBtnIsActive}`}
               onClick={() => {
                 setIsActiv(false);
               }}

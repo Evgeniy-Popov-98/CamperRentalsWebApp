@@ -2,8 +2,6 @@ import css from './ReviewsInfo.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
 export const ReviewsInfo = ({ reviews }) => {
-  console.log(reviews);
-
   return (
     <div>
       <ul className={css.reviewsList}>

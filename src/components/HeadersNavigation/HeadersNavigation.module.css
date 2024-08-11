@@ -30,3 +30,8 @@
   color: var(--main-color);
   cursor: pointer;
 }
+
+.active {
+  text-decoration: underline red;
+  text-underline-offset: 6px;
+}
