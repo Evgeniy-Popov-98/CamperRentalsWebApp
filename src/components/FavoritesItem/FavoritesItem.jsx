@@ -1,14 +1,13 @@
 import { ModalWindow } from '../ModalWindow/ModalWindow';
 import { useState } from 'react';
 
-import { restoreData } from '../../utils/localStorage';
+import { restoreData, restoreDataID } from '../../utils/localStorage';
 
 import css from './FavoritesItem.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
 export const FavoritesItem = ({ item, isNewArr }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  //   const [switchBtn, setSwitchBtn] = useState(true);
   const [newStyle, setNewStyle] = useState(false);
 
   const openModal = () => {
@@ -21,7 +20,7 @@ export const FavoritesItem = ({ item, isNewArr }) => {
 
   const saveItem = () => {
     restoreData(item);
-    //   setSwitchBtn(true);
+    restoreDataID(item._id);
     setNewStyle(true);
     isNewArr();
   };
