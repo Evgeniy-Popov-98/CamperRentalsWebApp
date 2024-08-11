@@ -18,7 +18,8 @@ export const CatalogList = ({ newArr, upDataArr, isActivBtn = true }) => {
           className={css.buttonLoadMore}
           type="submit"
           onClick={() => {
-            upDataArr(true);
+            // upDataArr(true);
+            upDataArr();
           }}
         >
           Load more
