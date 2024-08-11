@@ -27,10 +27,10 @@ export const HomePage = () => {
         </Link>
         <p></p>
       </div>
-      <div className={css.homePageContainer}>
-        <img src={ocean} alt="ocean" />
-        <img src={forest} alt="forest" />
-        <img src={mountains} alt="mountains" />
+      <div className={css.imgContainer}>
+        <img className={css.imgOne} src={ocean} alt="ocean" />
+        <img className={css.imgTwo} src={forest} alt="forest" />
+        <img className={css.imgThree} src={mountains} alt="mountains" />
       </div>
     </div>
   );
