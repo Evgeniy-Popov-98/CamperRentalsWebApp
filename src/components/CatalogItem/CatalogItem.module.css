@@ -120,6 +120,13 @@
   line-height: 150%;
   letter-spacing: -0.01em;
   color: #fff;
+
+  transition: 0.5s;
+}
+
+.buttonShowMore:hover {
+  background: #b13737;
+  transition: 0.5s;
 }
 
 .buttonIsFavotes {

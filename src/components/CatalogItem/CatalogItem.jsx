@@ -41,7 +41,7 @@ export const CatalogItem = ({ item }) => {
       <div className={css.descriptionBox}>
         <div className={css.itemTitleBox}>
           <h2 className={css.itemTitle}>{item.name}</h2>
-          <p className={css.itemTitlePrice}>&#x20ac;{item.price}</p>
+          <p className={css.itemTitlePrice}>&#x20ac;{item.price},00</p>
         </div>
         <div className={css.itemSubTitleBox}>
           <p className={css.itemSubTitleRating}>

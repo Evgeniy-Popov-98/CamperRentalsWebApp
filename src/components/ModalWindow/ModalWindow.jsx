@@ -73,6 +73,15 @@ export const ModalWindow = ({ modalIsOpen, closeModal, item }) => {
 
             <ModalForm />
           </div>
+          <button
+            onClick={() => {
+              closeModal();
+            }}
+          >
+            <svg className={css.iconClose}>
+              <use href={`${icons}#icon-close`} />
+            </svg>
+          </button>
         </div>
       </div>
     </ModalReact>

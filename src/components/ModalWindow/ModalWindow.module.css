@@ -1,5 +1,6 @@
 .modalBox {
   width: 920px;
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -139,4 +140,17 @@
   margin-top: 44px;
   display: flex;
   gap: 24px;
+}
+
+.iconClose {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  stroke: black;
+}
+
+.iconClose:hover {
+  stroke: #555;
 }
