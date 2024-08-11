@@ -7,3 +7,13 @@ export const dataLocal = () => {
   }
   return [];
 };
+
+export const dataLocalID = () => {
+  const data = window.localStorage.getItem('keyID');
+
+  if (data !== null) {
+    const dataItem = JSON.parse(data);
+    return dataItem.ID;
+  }
+  return [];
+};

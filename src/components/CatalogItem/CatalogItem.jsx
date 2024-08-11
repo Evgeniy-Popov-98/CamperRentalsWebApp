@@ -1,16 +1,29 @@
 import { ModalWindow } from '../ModalWindow/ModalWindow';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { addItemLocalStorage, restoreData } from '../../utils/localStorage';
-import { dataLocal } from '../../constans/constans';
+import {
+  addItemLocalStorage,
+  addItemLocalStorageID,
+  restoreData,
+  restoreDataID,
+} from '../../utils/localStorage';
+import { dataLocal, dataLocalID } from '../../constans/constans';
+import { addIsFavorites } from '../../redux/favorites/operations';
 
 import css from './CatalogItem.module.css';
 import icons from '../../assets/icons/symbol.svg';
 
 export const CatalogItem = ({ item }) => {
+  const dispatch = useDispatch();
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [switchBtn, setSwitchBtn] = useState(true);
-  const [newStyle, setNewStyle] = useState(true);
+  const [newStyle, setNewStyle] = useState(() => {
+    const test = dataLocalID();
+    const isActive = test.filter(element => element === item._id);
+    if (isActive.length > 0) return false;
+    return true;
+  });
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -20,17 +33,22 @@ export const CatalogItem = ({ item }) => {
     setModalIsOpen(false);
   };
 
-  const saveItem = switchBtn => {
-    if (switchBtn) {
+  const saveItem = newStyle => {
+    if (newStyle) {
       let data = dataLocal();
       data.push(item);
 
+      let dataId = dataLocalID();
+      dataId.push(item._id);
+
       addItemLocalStorage('saved-camper', data);
-      setSwitchBtn(false);
+      addItemLocalStorageID('keyID', dataId);
       setNewStyle(false);
+
+      dispatch(addIsFavorites(item._id));
     } else {
       restoreData(item);
-      setSwitchBtn(true);
+      restoreDataID(item._id);
       setNewStyle(true);
     }
   };
@@ -110,7 +128,7 @@ export const CatalogItem = ({ item }) => {
         </button>
         <button
           style={{ background: 'inherit' }}
-          onClick={() => saveItem(switchBtn)}
+          onClick={() => saveItem(newStyle)}
         >
           <svg
             className={`${
