@@ -1,15 +1,13 @@
 import { ModalWindow } from '../ModalWindow/ModalWindow';
 import { useState } from 'react';
 
-import css from './CatalogItem.module.css';
-import icons from '../../assets/icons/symbol.svg';
-
 import { addItemLocalStorage, restoreData } from '../../utils/localStorage';
 import { dataLocal } from '../../constans/constans';
 
-export const CatalogItem = ({ item }) => {
-  console.log(item);
+import css from './CatalogItem.module.css';
+import icons from '../../assets/icons/symbol.svg';
 
+export const CatalogItem = ({ item }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const [switchBtn, setSwitchBtn] = useState(true);
@@ -50,7 +48,12 @@ export const CatalogItem = ({ item }) => {
             </svg>
             {item.rating}({item.reviews.length} Reviews)
           </p>
-          <p className={css.itemSubTitleLocation}>{item.location}</p>
+          <p className={css.itemSubTitleLocation}>
+            <svg className={css.reviewsIconsLocation}>
+              <use href={`${icons}#icon-map-pin`} />
+            </svg>
+            {item.location}
+          </p>
         </div>
         <p className={css.descriptionText}>{item.description}</p>
         <ul className={css.descriptionList}>

@@ -1,10 +1,12 @@
 import ModalReact from 'react-modal';
+import { useState } from 'react';
+
 import { FeaturesInfo } from '../FeaturesInfo/FeaturesInfo';
 import { ModalForm } from '../ModalForm/ModalForm';
 import { ReviewsInfo } from '../ReviewsInfo/ReviewsInfo';
 
 import css from './ModalWindow.module.css';
-import { useState } from 'react';
+import icons from '../../assets/icons/symbol.svg';
 
 export const ModalWindow = ({ modalIsOpen, closeModal, item }) => {
   const [isActiv, setIsActiv] = useState(true);
@@ -22,8 +24,18 @@ export const ModalWindow = ({ modalIsOpen, closeModal, item }) => {
         <div style={{ width: '902px' }}>
           <h2 className={css.modalTitle}>{item.name}</h2>
           <div className={css.modalSubTitleBox}>
-            <p className={css.SubTitleRating}>{item.rating}</p>
-            <p className={css.SubTitleLocation}> {item.location}</p>
+            <p className={css.SubTitleRating}>
+              <svg className={css.reviewsIcons}>
+                <use href={`${icons}#icon-Rating`} />
+              </svg>
+              {item.rating}({item.reviews.length} Reviews)
+            </p>
+            <p className={css.SubTitleLocation}>
+              <svg className={css.reviewsIconsLocation}>
+                <use href={`${icons}#icon-map-pin`} />
+              </svg>
+              {item.location}
+            </p>
           </div>
           <p className={css.modalPrice}>&#x20ac;{item.price}</p>
           <div className={css.modalImgBox}>

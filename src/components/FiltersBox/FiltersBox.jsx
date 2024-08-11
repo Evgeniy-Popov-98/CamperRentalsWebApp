@@ -56,7 +56,9 @@ export const FiltersBox = () => {
         />
         <FilterType camper={camper} handleSizeChange={handleSizeChange} />
       </div>
-      <button type="submit">Submit</button>
+      <button className={css.buttonSearch} type="submit">
+        Submit
+      </button>
     </div>
   );
 };

@@ -37,3 +37,16 @@
   font-size: 14px;
   color: red;
 }
+
+.buttonSearch {
+  width: 166px;
+  height: 56px;
+  margin-top: 64px;
+  padding: 16px 40px;
+  border-radius: 200px;
+  background: #e44848;
+
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}

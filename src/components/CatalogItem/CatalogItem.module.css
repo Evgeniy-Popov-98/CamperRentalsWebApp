@@ -63,6 +63,14 @@
   color: var(--main-color);
 }
 
+.reviewsIconsLocation {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  stroke: black;
+  fill: #fff;
+}
+
 .itemSubTitleLocation {
   line-height: 150%;
   color: var(--main-color);
