@@ -12,7 +12,7 @@ import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   //   const dispatch = useDispatch();
-  const сampersAll = useSelector(selectAllCampers);
+  //   const сampersAll = useSelector(selectAllCampers);
   const campers = pagination(useSelector(selectAllCampers));
   const [isAllArr, setIsAllArr] = useState(false);
   const [index, setIndex] = useState(0);
@@ -24,6 +24,7 @@ const CatalogPage = () => {
   //   }, [dispatch]);
 
   useEffect(() => {
+    if (index === 0) return;
     const data = paginationNewArr(campers, index);
     setNewArr(prevState => [...prevState, ...data]);
   }, [index]);
