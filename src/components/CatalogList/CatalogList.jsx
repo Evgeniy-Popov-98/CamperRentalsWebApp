@@ -3,8 +3,6 @@ import { CatalogItem } from '../CatalogItem/CatalogItem';
 import css from './CatalogList.module.css';
 
 export const CatalogList = ({ newArr, upDataArr, isActivBtn = true }) => {
-  console.log(newArr);
-
   return (
     <div className={css.campersListBox}>
       <ul className={css.campersList}>

@@ -14,10 +14,10 @@ const CatalogPage = () => {
   //   const dispatch = useDispatch();
   //   const сampersAll = useSelector(selectAllCampers);
   const campers = pagination(useSelector(selectAllCampers));
-  const [isAllArr, setIsAllArr] = useState(false);
   const [index, setIndex] = useState(0);
-
   const [newArr, setNewArr] = useState(campers[index]);
+  const [isAllArr, setIsAllArr] = useState(false);
+  const [isActivBtn, setIsActivBtn] = useState(true);
 
   //   useEffect(() => {
   //     dispatch(fetchCampers());
@@ -34,6 +34,10 @@ const CatalogPage = () => {
     //   setIsAllArr(true);
     // }
     if (index < campers.length - 1) setIndex(index + 1);
+
+    console.log(index);
+
+    if (index >= 2) setIsActivBtn(false);
   };
 
   return (
@@ -48,7 +52,11 @@ const CatalogPage = () => {
       ) : (
         <CatalogList newArr={campers[0]} upDataArr={upDataArr} />
 		)} */}
-      <CatalogList newArr={newArr} upDataArr={upDataArr} />
+      <CatalogList
+        newArr={newArr}
+        upDataArr={upDataArr}
+        isActivBtn={isActivBtn}
+      />
     </section>
   );
 };
