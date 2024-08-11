@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import forest from '../../assets/images/forest.jpeg';
-import mountains from '../../assets/images/mountains.jpeg';
-import ocean from '../../assets/images/ocean.jpeg';
+import { ImageSlider } from '../../components/ImageSlider/ImageSlider';
 
 import css from './HomePage.module.css';
 
@@ -27,11 +25,8 @@ export const HomePage = () => {
         </Link>
         <p></p>
       </div>
-      <div className={css.homePageContainer}>
-        <img src={ocean} alt="ocean" />
-        <img src={forest} alt="forest" />
-        <img src={mountains} alt="mountains" />
-      </div>
+
+      <ImageSlider />
     </div>
   );
 };
