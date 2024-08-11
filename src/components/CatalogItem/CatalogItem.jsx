@@ -8,6 +8,8 @@ import { addItemLocalStorage, restoreData } from '../../utils/localStorage';
 import { dataLocal } from '../../constans/constans';
 
 export const CatalogItem = ({ item }) => {
+  console.log(item);
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const [switchBtn, setSwitchBtn] = useState(true);
@@ -42,8 +44,13 @@ export const CatalogItem = ({ item }) => {
           <p className={css.itemTitlePrice}>&#x20ac;{item.price}</p>
         </div>
         <div className={css.itemSubTitleBox}>
-          <p>{item.rating}</p>
-          <p>{item.location}</p>
+          <p className={css.itemSubTitleRating}>
+            <svg className={css.reviewsIcons}>
+              <use href={`${icons}#icon-Rating`} />
+            </svg>
+            {item.rating}({item.reviews.length} Reviews)
+          </p>
+          <p className={css.itemSubTitleLocation}>{item.location}</p>
         </div>
         <p className={css.descriptionText}>{item.description}</p>
         <ul className={css.descriptionList}>
