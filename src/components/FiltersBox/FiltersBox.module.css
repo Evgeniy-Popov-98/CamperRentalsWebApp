@@ -15,6 +15,13 @@
 }
 
 .locationInput {
+  width: 400px;
+  height: 56px;
+  margin-bottom: 14px;
+  padding: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f7f7f7;
 }
 
 .filterBoxTitle {
@@ -23,4 +30,10 @@
   font-weight: 500;
   line-height: 150%;
   color: rgba(16, 24, 40, 0.6);
+}
+
+.errorMessage {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: red;
 }
