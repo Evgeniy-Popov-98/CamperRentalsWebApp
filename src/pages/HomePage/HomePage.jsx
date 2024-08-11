@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchCampers } from '../../redux/camper/operations';
+// import { useDispatch } from 'react-redux';
+// import { useEffect } from 'react';
+// import { fetchCampers } from '../../redux/camper/operations';
 
 import forest from '../../assets/images/forest.jpeg';
 import mountains from '../../assets/images/mountains.jpeg';
@@ -10,11 +10,11 @@ import ocean from '../../assets/images/ocean.jpeg';
 import css from './HomePage.module.css';
 
 export const HomePage = () => {
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCampers());
-  }, [dispatch]);
+  //   useEffect(() => {
+  //     dispatch(fetchCampers());
+  //   }, [dispatch]);
 
   return (
     <div className={css.homePageContainer}>
